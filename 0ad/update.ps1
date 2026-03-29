@@ -5,8 +5,8 @@ $releases = 'https://play0ad.com/download/'
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*fileName\s*=\s*)('.*')"      = "`$1'0ad-$($Latest.Version)-win32.exe'"
-            "(?i)(^\s*fileName64\s*=\s*)('.*')"    = "`$1'0ad-$($Latest.Version)-win64.exe'"
+            "(?i)(^\s*\`$fileName\s*=\s*)('.*')"   = "`$1'0ad-$($Latest.Version)-win32.exe'"
+            "(?i)(^\s*\`$fileName64\s*=\s*)('.*')" = "`$1'0ad-$($Latest.Version)-win64.exe'"
             "(?i)(^\s*checksum\s*=\s*)('.*')"      = "`$1'$($Latest.Checksum32)'"
             "(?i)(^\s*checksum64\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum64)'"
         }
