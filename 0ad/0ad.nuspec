@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>0ad</id>
-    <version>0.27.0</version>
+    <version>0.28.0</version>
     <title>0 A.D.</title>
     <authors>Wildfire Games</authors>
     <owners>StanleySweet</owners>
