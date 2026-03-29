@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://play0ad.com/download/'
+$releases = 'https://play0ad.com/download/win'
 
 function global:au_SearchReplace {
     @{
@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re = '0ad-([.\d]+)-win64\.exe'
+    $re = '0ad-([.\d]+)-win64\.exe$'
     $url64 = $download_page.Links | Where-Object href -match $re | Select-Object -First 1 -ExpandProperty href
     $version = $Matches[1]
 
